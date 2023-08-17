@@ -5,7 +5,12 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ['Noto Sans'],
+        body: ['Inter'],
+      }
+    },
   },
   plugins: [],
 }

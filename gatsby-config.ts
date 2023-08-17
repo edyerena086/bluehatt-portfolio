@@ -10,7 +10,17 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    'gatsby-plugin-postcss'
+    'gatsby-plugin-postcss',
+    // Google fonts
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Inter',
+          'Noto Sans'
+        ],
+      }
+    },
   ],
 }
 
