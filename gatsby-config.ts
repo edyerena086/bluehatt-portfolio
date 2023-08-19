@@ -21,6 +21,23 @@ const config: GatsbyConfig = {
         ],
       }
     },
+    // Path aliases
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@components': 'src/components',
+          '@utils': 'src/utils',
+          '@common': 'src/common',
+        },
+        extensions: [
+          'js',
+          'ts',
+          'jsx',
+          'tsx',
+        ]
+      },
+    },
   ],
 }
 
