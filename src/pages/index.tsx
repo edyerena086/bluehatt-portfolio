@@ -7,11 +7,11 @@ import type {PageProps} from 'gatsby'
 import {Layout, Section, CallToAction, SectionTitle} from '@components/index'
 
 const IndexPage: FC<PageProps> = ({data}) => {
-  const {header} = data?.contentfulHomePage
+  const {header, footer} = data?.contentfulHomePage
 
   return (
-    <Layout header={header}>
-      <Section isInverted>
+    <Layout footer={footer} header={header}>
+      <Section>
         <SectionTitle isCentered subTitle={'Este es un subtitulo del section title'}>
           Nuestros servicios
         </SectionTitle>
@@ -32,6 +32,9 @@ query HomePageQuery {
         name
         showOff
       }
+    }
+    footer {
+      ...footerFragment
     }
   }
 }

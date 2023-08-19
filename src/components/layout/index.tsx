@@ -2,18 +2,19 @@
 import React, {FC, Fragment} from 'react'
 
 // Import components
-import {Header} from '@components/index'
+import {Header, Footer} from '@components/index'
 
 // Import interfaces
 import {LayoutPropsInterface} from './interfaces'
 
-const Layout: FC<LayoutPropsInterface> = ({children, header}) => {
+const Layout: FC<LayoutPropsInterface> = ({children, header, footer}) => {
   return (
     <Fragment>
       <Header {...header} />
       {
         children
       }
+      <Footer {...footer} />
     </Fragment>
   )
 }

@@ -7,6 +7,10 @@
     @apply font-title font-black text-3xl;
   }
 
+  h3 {
+    @apply font-title font-black text-2xl;
+  }
+
   p {
     @apply font-body text-primary;
   }
