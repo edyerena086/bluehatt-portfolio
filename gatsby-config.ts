@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
@@ -11,6 +15,8 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     // Google fonts
     {
       resolve: 'gatsby-plugin-google-fonts',
@@ -20,6 +26,15 @@ const config: GatsbyConfig = {
           'Noto Sans'
         ],
       }
+    },
+    // Contentful connection
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        useNameForId: false,
+      },
     },
     // Path aliases
     {

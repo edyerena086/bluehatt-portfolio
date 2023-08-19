@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply font-title font-black text-3xl;
+  }
+
+  p {
+    @apply font-body text-primary;
+  }
+}
